@@ -1,19 +1,26 @@
-import React, { useCallback, useMemo } from 'react'
+import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { set } from '../../slices/color'
+import styled from 'styled-components'
+
+const Display = styled.div`
+  width: 100px;
+  height: 100px;
+  background-color: ${({ color }) => color}
+`
 
 const Box = () => {
-  const backgroundColor = useSelector(s => s.color)
+  const color = useSelector(s => s.color)
   const dispatch = useDispatch()
-  const style = useMemo(() => ({ width: '100px', height: '100px', backgroundColor }), [backgroundColor])
+
   const handleClick = useCallback(() => {
-    dispatch(set(backgroundColor === 'red' ? 'green' : 'red'))
-  }, [backgroundColor, dispatch])
+    dispatch(set(color === 'red' ? 'green' : 'red'))
+  }, [color, dispatch])
 
   return (
-    <div style={style} onClick={handleClick}>
-      {backgroundColor}
-    </div>
+    <Display onClick={handleClick} color={color}>
+      {color}
+    </Display>
   )
 }
 
