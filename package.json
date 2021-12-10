@@ -31,7 +31,9 @@
     "webpack-cli": "^3",
     "webpack-dev-server": "^3"
   },
-  "jest": {
-    "verbose": true
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }
