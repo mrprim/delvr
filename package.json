@@ -10,10 +10,13 @@
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
     "prop-types": "^15",
     "react": "^16",
     "react-dom": "^16",
-    "react-hot-loader": "^4"
+    "react-hot-loader": "^4",
+    "react-redux": "^7.2.6",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "@neutrinojs/jest": "^9.5.0",
@@ -22,6 +25,7 @@
     "eslint": "^7",
     "jest": "^26",
     "neutrino": "^9.5.0",
+    "standard": "^16.0.4",
     "webpack": "^4",
     "webpack-cli": "^3",
     "webpack-dev-server": "^3"
