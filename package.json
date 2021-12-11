@@ -10,6 +10,7 @@
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
   },
   "dependencies": {
+    "@mrprim/random-rpg-stuff": "^1.0.16",
     "@reduxjs/toolkit": "^1.6.2",
     "prop-types": "^15",
     "react": "^16",

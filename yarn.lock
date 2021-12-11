@@ -1216,6 +1216,13 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@mrprim/random-rpg-stuff@^1.0.16":
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/@mrprim/random-rpg-stuff/-/random-rpg-stuff-1.0.16.tgz#a09d610bf3a95fe0bfc2024a04f437b1fd6b032c"
+  integrity sha512-LXt5WTqMclSpLhPmGSXK1JOib2wjdZY7oyWL2SfbKGBWDKgF11T3T0CyEAbzglB8w+5XbraOIbTphx+QdUSSmQ==
+  dependencies:
+    pluralize "^8.0.0"
+
 "@neutrinojs/clean@9.5.0":
   version "9.5.0"
   resolved "https://registry.npmjs.org/@neutrinojs/clean/-/clean-9.5.0.tgz"
@@ -6834,6 +6841,11 @@ pkg-up@^2.0.0:
   integrity sha1-yBmscoBZpGHKscOImivjxJoATX8=
   dependencies:
     find-up "^2.1.0"
+
+pluralize@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
+  integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
 
 portfinder@^1.0.26:
   version "1.0.28"

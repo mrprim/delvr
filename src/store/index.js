@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import color from '../slices/color'
+import beasts from '../slices/beasts'
 import reduxLogger from 'redux-logger'
 
 const reducer = {
-  color
+  beasts
 }
 
 const store = configureStore({
