@@ -13,6 +13,6 @@ module.exports = {
         title: 'delvr'
       }
     }),
-    jest(),
-  ],
+    jest()
+  ]
 };
