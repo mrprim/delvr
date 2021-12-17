@@ -1,8 +1,15 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
+import { SM } from '../../style/mediaQuerySizes'
 import Beasts from '../Beasts'
+import Footer from '../Footer'
+import Header from '../Header'
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -13,25 +20,41 @@ const GlobalStyle = createGlobalStyle`
 const LayoutGrid = styled.div`
   display: grid;
   min-height: 100vh;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 10vh 1fr 10vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 64px 1fr 128px;
 
   grid-template-areas:
-    "header header header header header header header header header header header header"
-    "sidebar body body body body body body body body body body body"
-    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    "header"
+    "body"
+    "footer";
+
+  @media only screen and (min-width:${SM}) {
+    grid-template-columns: 1fr 800px 1fr;
+
+    grid-template-areas:
+      "header header header"
+      "left-gutter body right-gutter"
+      "footer footer footer";
+  }
+`
+
+const Item = styled.div`
+  grid-area: ${({ gridArea }) => gridArea};
 `
 
 const Layout = () =>
   <>
     <GlobalStyle />
     <LayoutGrid>
-      <div style={{ gridArea: 'header', backgroundColor: 'red' }} />
-      <div style={{ gridArea: 'sidebar', backgroundColor: 'blue' }} />
-      <div style={{ gridArea: 'body', backgroundColor: 'violet' }}>
+      <Item gridArea='header'>
+        <Header />
+      </Item>
+      <Item gridArea='body'>
         <Beasts />
-      </div>
-      <div style={{ gridArea: 'footer', backgroundColor: 'cyan' }} />
+      </Item>
+      <Item gridArea='footer'>
+        <Footer />
+      </Item>
     </LayoutGrid>
   </>
 

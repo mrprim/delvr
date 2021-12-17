@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { XS, SM, MD, LG } from './mediaQuerySizes'
+import { XS, SM, MD, LG } from '../../style/mediaQuerySizes'
 
 const COLUMNS = 12
 const mod = 100 / COLUMNS
