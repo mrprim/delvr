@@ -9,6 +9,7 @@ const HeaderBody = styled.header`
   color: white;
   padding: 10px;
   display: flex;
+  box-shadow: 0 4px 8px grey;
 `
 const Left = styled.div`
   flex: 1;

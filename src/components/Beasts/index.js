@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { Item, Grid } from '../ResponsiveGrid'
 
 const Card = styled.div`
-  border: solid 1px black;s
+  border: solid 1px black;
 `
 
 const Beast = ({ id, species }) => {

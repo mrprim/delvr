@@ -6,6 +6,7 @@ const mod = 100 / COLUMNS
 
 export const Item = styled.div`
   flex: 0 0 ${({ xs = 1 }) => xs * mod}%;
+  transition: .5s all;
   ${({ sm }) => buildMediaQuery('min-width', XS, sm)}
   ${({ md }) => buildMediaQuery('min-width', SM, md)}
   ${({ lg }) => buildMediaQuery('min-width', MD, lg)}
